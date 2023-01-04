@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'clients',
+    'rest_framework.authtoken'
 ]
 
 MIDDLEWARE = [

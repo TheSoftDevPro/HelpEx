@@ -32,7 +32,7 @@ class Client(models.Model):
 
 class ClientLocation(models.Model):
     client = models.ForeignKey(Client,related_name="locations",on_delete=models.CASCADE)
-    location = models.ForeignKey(Client,related_name="clients",on_delete=models.CASCADE)
+    location = models.ForeignKey(Location,related_name="clients",on_delete=models.CASCADE)
     alias = models.CharField("Location name for client",max_length=20,default="Others")
     is_default = models.BooleanField(default=False)
 
