@@ -1,0 +1,11 @@
+db.sqlite3
+.DS_Store
+/hx-venv
+__pycache__
+migrations
+keyconfig.py
+config/
+backend-media/
+backend-static/
+.vscode
+*.save
