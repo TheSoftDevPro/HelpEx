@@ -18,6 +18,10 @@ class ClientRegisterAPI(GenericAPIView):
     permission_classes = (AllowAny,)
 
     def post(self,request):
+
+        """
+        
+        """
         data  = request.data
         serializer = ClientSerializer(data = data)
         if serializer.is_valid():
