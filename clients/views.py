@@ -1,6 +1,7 @@
 from rest_framework.viewsets import ViewSet
 from rest_framework.generics import *
-from rest_framework.views import *
+from rest_framework.views import APIView
+from rest_framework import status
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
@@ -17,7 +18,7 @@ from core.encryption import raw_to_encrypted as encrypt
 class ClientRegisterAPI(GenericAPIView):
 
     authentication_classes = []
-    # serializer_class = ClientSerializer
+    serializer_class = ClientSerializer
 
     def post(self,request):
 
@@ -46,7 +47,7 @@ class ClientRegisterAPI(GenericAPIView):
             return Response({"message":serializer.errors},status=status.HTTP_400_BAD_REQUEST)
         
 
-class ClientLoginAPI(GenericAPIView):
+class ClientLoginAPI(APIView):
 
     authentication_classes = []
 
